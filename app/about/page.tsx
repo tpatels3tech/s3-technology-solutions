@@ -9,7 +9,14 @@ export default function About() {
     <>
       <Section>
         <Container>
-          <h1 className="text-4xl font-semibold tracking-tight">About</h1>
+          <div className="text-xs font-semibold tracking-[0.28em] text-white/60">ABOUT</div>
+          <h1 className="mt-4 text-5xl font-semibold tracking-tight sm:text-6xl">
+            Business-led.
+            <br />
+            <span className="bg-gradient-to-r from-cyan-300 via-sky-200 to-violet-300 bg-clip-text text-transparent">
+              Controls-forward.
+            </span>
+          </h1>
           <p className="mt-4 max-w-3xl text-white/70">
             S3 Technology Solutions helps organizations turn AI and digital transformation into measurable outcomes—while keeping governance, security, and risk in view.
           </p>
@@ -20,28 +27,28 @@ export default function About() {
         <Container>
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
-              <div className="text-lg font-semibold">Our approach</div>
-              <p className="mt-2 text-sm text-white/70">
+              <div className="text-xl font-semibold">Our approach</div>
+              <p className="mt-2 text-base text-white/70">
                 Start with clear business priorities, validate assumptions early, and scale what works with disciplined execution.
               </p>
             </Card>
             <Card>
-              <div className="text-lg font-semibold">How we deliver</div>
-              <p className="mt-2 text-sm text-white/70">
+              <div className="text-xl font-semibold">How we deliver</div>
+              <p className="mt-2 text-base text-white/70">
                 Practical roadmaps, hands-on implementation support, and executive-ready communication to align teams and stakeholders.
               </p>
             </Card>
             <Card>
-              <div className="text-lg font-semibold">How we manage risk</div>
-              <p className="mt-2 text-sm text-white/70">
+              <div className="text-xl font-semibold">How we manage risk</div>
+              <p className="mt-2 text-base text-white/70">
                 Controls, auditability, and human-in-the-loop guardrails where decisions have material business, legal, or regulatory impact.
               </p>
             </Card>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-lg font-semibold">Where we can help</div>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-white/70">
+          <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+            <div className="text-xl font-semibold">Where we can help</div>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-white/70">
               <li>Translate AI strategy into a phased roadmap with clear ownership and KPIs</li>
               <li>Implement scalable data, cloud, and integration foundations for AI-enabled workflows</li>
               <li>Assess cyber risk, third-party dependencies, and compliance readiness</li>

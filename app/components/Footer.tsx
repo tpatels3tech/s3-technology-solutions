@@ -2,9 +2,10 @@ import { site } from '@/app/lib/site';
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black">
+    <footer className="border-t border-white/10 bg-black/20 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 py-10">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="h-px w-full bg-gradient-to-r from-cyan-500/0 via-cyan-200/25 to-violet-500/0" />
+        <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <div className="font-semibold text-white">{site.name}</div>
             <div className="mt-1 text-sm text-white/60">{site.tagline}</div>
