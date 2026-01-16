@@ -1,0 +1,40 @@
+import { site } from '@/app/lib/site';
+
+export function Footer() {
+  return (
+    <footer className="border-t border-white/10 bg-black">
+      <div className="mx-auto max-w-6xl px-4 py-10">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <div className="font-semibold text-white">{site.name}</div>
+            <div className="mt-1 text-sm text-white/60">{site.tagline}</div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4 text-sm">
+            <a className="text-white/70 hover:text-white" href="/services">
+              Services
+            </a>
+            <a className="text-white/70 hover:text-white" href="/about">
+              About
+            </a>
+            <a className="text-white/70 hover:text-white" href="/contact">
+              Contact
+            </a>
+            <a
+              className="text-white/70 hover:text-white"
+              href={site.linkedInUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-8 text-xs text-white/40">
+          © {new Date().getFullYear()} {site.name}. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
+}
