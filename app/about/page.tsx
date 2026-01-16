@@ -18,7 +18,7 @@ export default function About() {
             </span>
           </h1>
           <p className="mt-4 max-w-3xl text-white/70">
-            S3 Technology Solutions helps organizations turn AI and digital transformation into measurable outcomes—while keeping governance, security, and risk in view.
+            S3 Technology Solutions helps organizations turn AI Agents and digital transformation into measurable outcomes—while keeping governance, security, and risk in view.
           </p>
         </Container>
       </Section>
