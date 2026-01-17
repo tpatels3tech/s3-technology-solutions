@@ -14,14 +14,14 @@ export function Cta({
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h3 className="text-xl font-semibold text-white sm:text-2xl">{title}</h3>
-              <p className="mt-2 max-w-2xl text-sm text-slate-200">{subtitle}</p>
+              <p className="mt-2 max-w-2xl text-sm text-white">{subtitle}</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <a
                 href={site.calendlyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full bg-white px-5 py-2 text-sm font-medium text-black hover:bg-white/90"
+                className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur hover:bg-white/15"
               >
                 Book a Strategy Call
               </a>

@@ -10,7 +10,7 @@ export function Section({ children, className = '' }: { children: ReactNode; cla
 
 export function Badge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-slate-100 backdrop-blur">
+    <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs text-white backdrop-blur">
       {children}
     </span>
   );
@@ -33,7 +33,7 @@ export function PrimaryButton({ children, href }: { children: ReactNode; href: s
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-300 via-sky-200 to-violet-300 px-7 py-3.5 text-base font-semibold text-black shadow-[0_12px_30px_-14px_rgba(34,211,238,0.55)] hover:brightness-95"
+      className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-xl shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)] hover:bg-white/15"
     >
       {children}
     </a>

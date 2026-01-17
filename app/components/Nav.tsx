@@ -23,7 +23,7 @@ export function Nav() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/10 hover:text-white"
+              className="rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
             >
               {item.label}
             </Link>
@@ -32,7 +32,7 @@ export function Nav() {
             href={site.calendlyUrl}
             target="_blank"
             rel="noreferrer"
-            className="ml-2 rounded-full bg-gradient-to-r from-cyan-300 via-sky-200 to-violet-300 px-5 py-2.5 text-sm font-semibold text-black shadow-[0_12px_30px_-18px_rgba(34,211,238,0.55)] hover:brightness-95"
+            className="ml-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur hover:bg-white/15"
           >
             Book a Call
           </a>
