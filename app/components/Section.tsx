@@ -15,7 +15,7 @@ export function Section({
         {eyebrow ? (
           <p className="text-xs font-semibold uppercase tracking-wider text-white/60">{eyebrow}</p>
         ) : null}
-        <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">{title}</h2>
+        <h2 className="mt-2 text-2xl font-semibold tracking-tight !text-white sm:text-3xl">{title}</h2>
         <div className="mt-6 text-white/80">{children}</div>
       </div>
     </section>
