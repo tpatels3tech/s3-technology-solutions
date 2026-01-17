@@ -23,7 +23,7 @@ export function Nav() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white"
+              className="rounded-full px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/10 hover:text-white"
             >
               {item.label}
             </Link>

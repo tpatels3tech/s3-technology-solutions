@@ -71,7 +71,7 @@ export default function Home() {
           <Container>
             <div className="flex flex-col gap-10">
               <div className="max-w-3xl">
-                <div className="text-xs font-semibold tracking-[0.28em] text-white/60">WELCOME TO S3 TECHNOLOGY SOLUTIONS</div>
+                <div className="text-xs font-semibold tracking-[0.28em] text-slate-300">WELCOME TO S3 TECHNOLOGY SOLUTIONS</div>
                 <div className="flex flex-wrap items-center gap-2">
                   <Badge>AI Strategy</Badge>
                   <Badge>Implementation</Badge>
@@ -87,8 +87,8 @@ export default function Home() {
                   <br />
                   Deliver measurable outcomes.
                 </h1>
-                <p className="mt-5 text-xl text-white/75 sm:text-2xl">{site.tagline}</p>
-                <p className="mt-4 text-base text-white/70 sm:text-lg">
+                <p className="mt-5 text-xl text-slate-200 sm:text-2xl">{site.tagline}</p>
+                <p className="mt-4 text-base text-slate-200 sm:text-lg">
                   We help enterprises move from AI ambition to real-world impact—aligning strategy, execution, and risk
                   management to deliver scalable, trusted results.
                 </p>
@@ -108,7 +108,7 @@ export default function Home() {
                         <c.icon className="h-4 w-4 text-cyan-200" />
                         {c.title}
                       </div>
-                      <div className="mt-1 text-sm text-white/70">{c.desc}</div>
+                      <div className="mt-1 text-sm text-slate-200">{c.desc}</div>
                     </div>
                   ))}
                 </div>
@@ -121,7 +121,7 @@ export default function Home() {
       <Section className="pt-0">
         <Container>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Core services</h2>
-          <p className="mt-3 max-w-2xl text-white/70 sm:text-lg">
+          <p className="mt-3 max-w-2xl text-slate-200 sm:text-lg">
             Simple, focused offerings that help you plan, execute, and manage risk—without slowing down delivery.
           </p>
 
@@ -129,7 +129,7 @@ export default function Home() {
             {services.map((s) => (
               <Card key={s.title}>
                 <div className="text-lg font-semibold">{s.title}</div>
-                <p className="mt-2 text-sm text-white/70">{s.desc}</p>
+                <p className="mt-2 text-sm text-slate-200">{s.desc}</p>
                 <div className="mt-5">
                   <Link
                     href={s.href}
@@ -150,9 +150,9 @@ export default function Home() {
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {steps.map((step) => (
               <Card key={step.n}>
-                <div className="text-xs font-semibold text-white/60">{step.n}</div>
+                <div className="text-xs font-semibold text-slate-300">{step.n}</div>
                 <div className="mt-2 text-xl font-semibold">{step.title}</div>
-                <p className="mt-2 text-sm text-white/70">{step.desc}</p>
+                <p className="mt-2 text-sm text-slate-200">{step.desc}</p>
               </Card>
             ))}
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
           <div className="mt-12 flex flex-col items-start justify-between gap-5 rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl shadow-[0_28px_90px_-55px_rgba(0,0,0,0.85)] md:flex-row md:items-center">
             <div>
               <div className="text-xl font-semibold">Ready to move fast—with governance and confidence?</div>
-              <div className="mt-1 text-sm text-white/70">
+              <div className="mt-1 text-sm text-slate-200">
                 Book a short call to align on goals, scope, and next steps.
               </div>
             </div>

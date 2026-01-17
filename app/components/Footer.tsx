@@ -8,21 +8,21 @@ export function Footer() {
         <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <div className="font-semibold text-white">{site.name}</div>
-            <div className="mt-1 text-sm text-white/60">{site.tagline}</div>
+            <div className="mt-1 text-sm text-slate-300">{site.tagline}</div>
           </div>
 
           <div className="flex flex-wrap items-center gap-4 text-sm">
-            <a className="text-white/70 hover:text-white" href="/services">
+            <a className="text-slate-200 hover:text-white" href="/services">
               Services
             </a>
-            <a className="text-white/70 hover:text-white" href="/about">
+            <a className="text-slate-200 hover:text-white" href="/about">
               About
             </a>
-            <a className="text-white/70 hover:text-white" href="/contact">
+            <a className="text-slate-200 hover:text-white" href="/contact">
               Contact
             </a>
             <a
-              className="text-white/70 hover:text-white"
+              className="text-slate-200 hover:text-white"
               href={site.linkedInUrl}
               target="_blank"
               rel="noreferrer"
@@ -32,7 +32,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 text-xs text-white/40">
+        <div className="mt-8 text-xs text-slate-400">
           © {new Date().getFullYear()} {site.name}. All rights reserved.
         </div>
       </div>

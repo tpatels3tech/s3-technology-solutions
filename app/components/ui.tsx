@@ -10,7 +10,7 @@ export function Section({ children, className = '' }: { children: ReactNode; cla
 
 export function Badge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">
+    <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-slate-100 backdrop-blur">
       {children}
     </span>
   );

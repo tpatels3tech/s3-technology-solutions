@@ -14,7 +14,7 @@ export function Cta({
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h3 className="text-xl font-semibold text-white sm:text-2xl">{title}</h3>
-              <p className="mt-2 max-w-2xl text-sm text-white/70">{subtitle}</p>
+              <p className="mt-2 max-w-2xl text-sm text-slate-200">{subtitle}</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <a
