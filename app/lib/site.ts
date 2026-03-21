@@ -1,12 +1,5 @@
 export const site = {
   name: 'S3 Technology Solutions',
-<<<<<<< HEAD
-  tagline: 'AI-Driven Strategy. Secure Execution. Measurable Outcomes.',
-  // Update these values in app/lib/site.ts
-  calendlyUrl: 'https://outlook.office.com/book/S3TechnologySolutions@s3tech.co/',
-  contactEmail: 'tpatel@s3tech.co',
-  linkedInUrl: 'https://www.linkedin.com/in/tejpatel1',
-=======
   shortName: 'S3 Tech',
   domain: 's3tech.co',
   tagline: 'AI strategy, agentic workflow design, implementation support, and cyber risk guidance for growing organizations.',
@@ -15,7 +8,7 @@ export const site = {
   contact: {
     calendlyUrl: 'https://outlook.office.com/book/S3TechnologySolutions@s3tech.co/',
     email: 'tpatel@s3tech.co',
-    linkedInUrl: 'https://www.linkedin.com/in/YOUR-PROFILE',
+    linkedInUrl: 'https://www.linkedin.com/in/tejpatel1',
   },
   nav: [
     { href: '/', label: 'Home' },
@@ -78,7 +71,8 @@ export const site = {
         'Phased roadmap with realistic next steps across data, people, and platforms',
         'Agentic operating-model recommendations, ownership, and human review points',
       ],
-      bestFor: 'Organizations that want to move beyond experimentation and make disciplined AI investment decisions tied to business strategy, governance, and measurable returns.',
+      bestFor:
+        'Organizations that want to move beyond experimentation and make disciplined AI investment decisions tied to business strategy, governance, and measurable returns.',
     },
     {
       slug: 'implementation',
@@ -152,7 +146,6 @@ export const site = {
     intro:
       'If you are evaluating an initiative, trying to untangle delivery, or want a second opinion on risk and priorities, we can start with a short conversation.',
   },
->>>>>>> ca5e7f8 (rebuild website for readability and agentic positioning)
 };
 
 export type SiteContent = typeof site;
