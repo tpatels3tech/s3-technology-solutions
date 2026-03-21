@@ -1,4 +1,5 @@
 import { site } from '@/app/lib/site';
+import { ButtonLink, Container, Surface } from '@/app/components/ui';
 
 export function Cta({
   title = 'Ready to talk?',
@@ -9,32 +10,20 @@ export function Cta({
 }) {
   return (
     <section className="py-14">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-10">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h3 className="text-xl font-semibold text-white sm:text-2xl">{title}</h3>
-              <p className="mt-2 max-w-2xl text-sm text-white">{subtitle}</p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href={site.calendlyUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur hover:bg-white/15"
-              >
-                Book a Strategy Call
-              </a>
-              <a
-                href="/contact"
-                className="rounded-full border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-white/10"
-              >
-                Contact
-              </a>
-            </div>
+      <Container>
+        <Surface className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 className="text-xl font-semibold text-[var(--ink)] sm:text-2xl">{title}</h3>
+            <p className="mt-2 max-w-2xl text-sm leading-7 text-[var(--muted)]">{subtitle}</p>
           </div>
-        </div>
-      </div>
+          <div className="flex flex-wrap gap-3">
+            <ButtonLink href={site.contact.calendlyUrl}>Book a Strategy Call</ButtonLink>
+            <ButtonLink href="/contact" variant="secondary">
+              Contact
+            </ButtonLink>
+          </div>
+        </Surface>
+      </Container>
     </section>
   );
 }

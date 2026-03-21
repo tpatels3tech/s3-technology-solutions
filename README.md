@@ -1,29 +1,32 @@
-# S3 Technology Solutions (Website)
+# S3 Technology Solutions
 
-A clean, conversion-focused consulting website built with **Next.js (App Router)** and **Tailwind CSS**, ready for **Vercel**.
+Marketing site for `s3tech.co`, built with Next.js App Router and Tailwind CSS.
 
-## Pages
-- Home: `/`
-- Services: `/services`
-- About: `/about`
-- Contact: `/contact`
-
-## Quick Start
+## Quick start
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Configure links
-Edit **`app/lib/site.ts`**:
-- `calendlyUrl`
-- `contactEmail`
-- `linkedInUrl`
+## Where to update content
 
-## Deploy to Vercel
-1. Push this repo to GitHub
-2. In Vercel, **New Project** → Import the repo
-3. Deploy (defaults are fine)
-4. Add your domain in Vercel → update DNS per Vercel instructions
+Most site content now lives in `app/lib/site.ts`, including:
 
+- company name and description
+- navigation labels
+- homepage copy
+- service descriptions
+- about page content
+- contact links
+
+## Pages
+
+- `/`
+- `/services`
+- `/about`
+- `/contact`
+
+## Deployment
+
+This app can be deployed to Vercel or any platform that supports Next.js.

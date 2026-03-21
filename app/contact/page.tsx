@@ -1,5 +1,5 @@
 import { site } from '@/app/lib/site';
-import { Card, Container, PrimaryButton, SecondaryButton, Section } from '@/app/components/ui';
+import { ButtonLink, Container, Section, SectionHeading, Surface } from '@/app/components/ui';
 
 export const metadata = {
   title: 'Contact',
@@ -10,45 +10,34 @@ export default function Contact() {
     <>
       <Section>
         <Container>
-          <div className="text-xs font-semibold tracking-[0.28em] text-white">CONTACT</div>
-          <h1 className="mt-4 text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-            Let’s align fast— <span className="text-white">then execute.</span>
-          </h1>
-          <div className="mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-300 via-sky-200 to-violet-300" />
-          <p className="mt-4 max-w-3xl text-white">
-            The quickest way to get started is a short strategy call. If you prefer email, reach out any time.
-          </p>
+          <SectionHeading eyebrow="Contact" title={site.contactPage.title} intro={site.contactPage.intro} as="h1" />
         </Container>
       </Section>
 
       <Section className="pt-0">
         <Container>
-          <div className="grid gap-4 md:grid-cols-2">
-            <Card>
-              <div className="text-xl font-semibold">Book a Strategy Call</div>
-              <p className="mt-3 text-base text-white">
-                20–30 minutes to align on goals, scope, and next steps.
+          <div className="grid gap-5 md:grid-cols-2">
+            <Surface className="bg-[var(--surface-strong)]">
+              <div className="text-xl font-semibold text-[var(--ink)]">Booking</div>
+              <p className="mt-3 text-base leading-7 text-[var(--muted)]">
+                A short conversation is the fastest way to align on what you are working through and what kind of support would help.
               </p>
-              <div className="mt-5">
-                <PrimaryButton href={site.calendlyUrl}>Open Calendly</PrimaryButton>
+              <div className="mt-6">
+                <ButtonLink href={site.contact.calendlyUrl}>Book Consultation</ButtonLink>
               </div>
-              <div className="mt-3 text-xs text-white">
-                Update your Calendly link in <span className="font-mono">app/lib/site.ts</span>.
-              </div>
-            </Card>
+            </Surface>
 
-            <Card>
-              <div className="text-xl font-semibold">Email</div>
-              <p className="mt-3 text-base text-white">
-                Prefer email? Send a note and we’ll respond with proposed times.
+            <Surface className="bg-[var(--surface-strong)]">
+              <div className="text-xl font-semibold text-[var(--ink)]">Send an email</div>
+              <p className="mt-3 text-base leading-7 text-[var(--muted)]">
+                Prefer email first? Reach out with a little context and we can respond with suggested next steps.
               </p>
-              <div className="mt-5">
-                <SecondaryButton href={`mailto:${site.contactEmail}`}>{site.contactEmail}</SecondaryButton>
+              <div className="mt-6">
+                <ButtonLink href={`mailto:${site.contact.email}`} variant="secondary">
+                  Contact Us
+                </ButtonLink>
               </div>
-              <div className="mt-3 text-xs text-white">
-                Update your email in <span className="font-mono">app/lib/site.ts</span>.
-              </div>
-            </Card>
+            </Surface>
           </div>
         </Container>
       </Section>

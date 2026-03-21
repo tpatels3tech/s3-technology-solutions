@@ -1,52 +1,78 @@
-import type { ReactNode } from 'react';
+import type { ElementType, ReactNode } from 'react';
+import Link from 'next/link';
 
 export function Container({ children }: { children: ReactNode }) {
-  return <div className="mx-auto max-w-6xl px-4 sm:px-6">{children}</div>;
+  return <div className="mx-auto max-w-6xl px-5 sm:px-8">{children}</div>;
 }
 
 export function Section({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <section className={`py-20 sm:py-24 ${className}`}>{children}</section>;
+  return <section className={`py-14 sm:py-18 ${className}`}>{children}</section>;
 }
 
-export function Badge({ children }: { children: ReactNode }) {
+export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs text-white backdrop-blur">
+    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-strong)]">
       {children}
-    </span>
-  );
-}
-
-export function Card({ children }: { children: ReactNode }) {
-  // Glassy “panel” look: gradient border + blur + deeper shadows
-  return (
-    <div className="group relative rounded-3xl bg-gradient-to-b from-white/15 to-white/5 p-px shadow-[0_28px_90px_-35px_rgba(0,0,0,0.85)]">
-      <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl transition hover:border-white/20 hover:bg-white/[0.055]">
-        {children}
-      </div>
     </div>
   );
 }
 
-export function PrimaryButton({ children, href }: { children: ReactNode; href: string }) {
+export function Surface({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-xl shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)] hover:bg-white/15"
+    <div
+      className={`rounded-3xl border border-[var(--border-strong)] bg-[var(--surface)] p-6 shadow-[0_18px_40px_-26px_rgba(0,0,0,0.7)] sm:p-8 ${className}`}
     >
       {children}
-    </a>
+    </div>
   );
 }
 
-export function SecondaryButton({ children, href }: { children: ReactNode; href: string }) {
+export function ButtonLink({
+  children,
+  href,
+  variant = 'primary',
+}: {
+  children: ReactNode;
+  href: string;
+  variant?: 'primary' | 'secondary';
+}) {
+  const isExternal = href.startsWith('http') || href.startsWith('mailto:');
+  const className =
+    variant === 'primary'
+      ? 'inline-flex items-center justify-center rounded-xl border border-[#2f6fbe] bg-[#2f6fbe] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#255c9e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9fc5ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08111d]'
+      : 'inline-flex items-center justify-center rounded-xl border border-[#4c6f9f] bg-[#132238] px-5 py-3 text-sm font-semibold text-[#f7fbff] transition hover:border-[#9fc5ff] hover:bg-[#1a2f4d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9fc5ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08111d]';
+
+  if (isExternal) {
+    return (
+      <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined} className={className}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-7 py-3.5 text-base font-medium text-white backdrop-blur-xl hover:bg-white/[0.10]"
-    >
+    <Link href={href} className={className}>
       {children}
-    </a>
+    </Link>
+  );
+}
+
+export function SectionHeading({
+  eyebrow,
+  title,
+  intro,
+  as: Tag = 'h2',
+}: {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  as?: ElementType;
+}) {
+  return (
+    <div className="max-w-3xl">
+      {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
+      <Tag className="mt-3 text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl">{title}</Tag>
+      {intro ? <p className="mt-4 text-lg leading-8 text-[var(--muted)]">{intro}</p> : null}
+    </div>
   );
 }

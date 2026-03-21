@@ -1,29 +1,25 @@
 import { site } from '@/app/lib/site';
+import { Container } from '@/app/components/ui';
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/20 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <div className="h-px w-full bg-gradient-to-r from-cyan-500/0 via-cyan-200/25 to-violet-500/0" />
-        <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t border-[var(--border)] bg-[rgba(5,11,21,0.72)]">
+      <Container>
+        <div className="flex flex-col gap-8 py-10 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <div className="font-semibold text-white">{site.name}</div>
-            <div className="mt-1 text-sm text-white">{site.tagline}</div>
+            <div className="font-semibold text-[var(--ink)]">{site.name}</div>
+            <div className="mt-2 max-w-md text-sm leading-6 text-[var(--muted)]">{site.description}</div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 text-sm">
-            <a className="text-white hover:underline" href="/services">
-              Services
-            </a>
-            <a className="text-white hover:underline" href="/about">
-              About
-            </a>
-            <a className="text-white hover:underline" href="/contact">
-              Contact
-            </a>
+          <div className="flex flex-wrap items-center gap-4 text-sm text-[var(--muted-strong)]">
+            {site.nav.map((item) => (
+              <a key={item.href} className="hover:text-[var(--ink)] hover:underline" href={item.href}>
+                {item.label}
+              </a>
+            ))}
             <a
-              className="text-white hover:underline"
-              href={site.linkedInUrl}
+              className="hover:text-[var(--ink)] hover:underline"
+              href={site.contact.linkedInUrl}
               target="_blank"
               rel="noreferrer"
             >
@@ -32,10 +28,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 text-xs text-white">
+        <div className="border-t border-[var(--border)] py-5 text-xs text-[var(--muted)]">
           © {new Date().getFullYear()} {site.name}. All rights reserved.
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

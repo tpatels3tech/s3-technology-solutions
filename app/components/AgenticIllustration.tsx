@@ -77,7 +77,7 @@ export function AgenticIllustration() {
 
       <div className="relative mt-4">
         <div className="text-sm font-semibold text-white">Agentic AI, with controls</div>
-        <div className="mt-1 text-sm text-white">
+        <div className="mt-1 text-sm leading-7 text-slate-200">
           Orchestrate workflows across data and tools while keeping humans and governance in the loop.
         </div>
       </div>

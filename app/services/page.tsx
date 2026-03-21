@@ -1,6 +1,6 @@
 import { site } from '@/app/lib/site';
-import { Card, Container, PrimaryButton, Section } from '@/app/components/ui';
-import { AgenticIllustration } from '@/app/components/AgenticIllustration';
+import { ButtonLink, Container, Section, SectionHeading, Surface } from '@/app/components/ui';
+import { AgenticPulse } from '@/app/components/AgenticPulse';
 
 export const metadata = {
   title: 'Services',
@@ -11,117 +11,70 @@ export default function Services() {
     <>
       <Section>
         <Container>
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div>
-              <div className="text-xs font-semibold tracking-[0.28em] text-white">SERVICES</div>
-              <h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-                Built for speed.
-                <br />
-                <span className="text-white">Designed for trust.</span>
-              </h1>
-              <div className="mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-300 via-sky-200 to-violet-300" />
-              <p className="mt-4 max-w-3xl text-base text-white sm:text-lg">
-                Three focused offerings that help you prioritize AI, deliver at scale, and reduce cyber risk with clear,
-                executive-ready outputs.
-              </p>
-            </div>
-
-            <div className="lg:pl-6">
-              <AgenticIllustration />
-            </div>
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+            <SectionHeading
+              eyebrow="Services"
+              title="Clear service lines built around AI strategy, agentic execution, and risk-aware delivery."
+              intro="This page is intentionally straightforward. Each service explains what it is, what you get, and when it is the right fit, with additional focus on copilots, agentic workflows, governance, and operating model design."
+              as="h1"
+            />
+            <AgenticPulse />
           </div>
         </Container>
       </Section>
 
       <Section className="pt-0">
         <Container>
+          <div className="mb-6 grid gap-4 md:grid-cols-3">
+            {site.agenticOfferings.map((offering) => (
+              <Surface key={offering.title}>
+                <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)]">
+                  Agentic
+                </div>
+                <div className="mt-3 text-lg font-semibold text-[var(--ink)]">{offering.title}</div>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{offering.description}</p>
+              </Surface>
+            ))}
+          </div>
+
           <div className="grid gap-6">
-            <Card>
-              <div id="ai-strategy" className="scroll-mt-24" />
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">1) AI Strategy & Roadmapping</h2>
-              <p className="mt-3 text-base text-white sm:text-lg">
-                Move from experimentation to an enterprise-ready plan. We help leaders define a business-aligned AI
-                strategy, prioritize use cases, and build a roadmap that balances value, governance, and readiness.
-              </p>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl shadow-[0_18px_55px_-40px_rgba(0,0,0,0.8)]">
-                  <div className="text-base font-semibold">What you get</div>
-                  <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-white">
-                    <li>Use-case identification and prioritization</li>
-                    <li>Roadmap and investment plan (phased delivery)</li>
-                    <li>Data and platform readiness assessment</li>
-                    <li>Responsible AI governance and control framework</li>
-                  </ul>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl shadow-[0_18px_55px_-40px_rgba(0,0,0,0.8)]">
-                  <div className="text-base font-semibold">Best for</div>
-                  <p className="mt-3 text-base text-white">
-                    Executive teams who want a clear AI direction and a practical plan to scale beyond pilots.
-                  </p>
-                </div>
-              </div>
-            </Card>
+            {site.services.map((service, index) => (
+              <Surface key={service.slug} className="bg-[var(--surface-strong)]">
+                <div id={service.slug} className="scroll-mt-28" />
+                <div className="text-sm font-semibold text-[var(--accent-strong)]">Service {index + 1}</div>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl">{service.name}</h2>
+                <p className="mt-4 max-w-3xl text-lg leading-8 text-[var(--muted)]">{service.details}</p>
 
-            <Card>
-              <div id="implementation" className="scroll-mt-24" />
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">2) Implementation</h2>
-              <p className="mt-3 text-base text-white sm:text-lg">
-                Hands-on execution across data, cloud, integration, and AI-enabled workflows. We focus on scalable,
-                secure delivery with human-in-the-loop oversight where it matters.
-              </p>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl shadow-[0_18px_55px_-40px_rgba(0,0,0,0.8)]">
-                  <div className="text-base font-semibold">What you get</div>
-                  <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-white">
-                    <li>AI and data platform implementation support</li>
-                    <li>Secure cloud foundations and integration patterns</li>
-                    <li>Operating model with guardrails and escalation paths</li>
-                    <li>Delivery leadership, metrics, and execution cadence</li>
-                  </ul>
+                <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+                  <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface)] p-6">
+                    <div className="text-base font-semibold text-[var(--ink)]">What you get</div>
+                    <ul className="mt-4 space-y-3 text-base leading-7 text-[var(--muted)]">
+                      {service.outcomes.map((outcome) => (
+                        <li key={outcome} className="flex gap-3">
+                          <span className="mt-2 h-2 w-2 rounded-full bg-[var(--accent-strong)]" />
+                          <span>{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface-soft)] p-6">
+                    <div className="text-base font-semibold text-[var(--ink)]">Best for</div>
+                    <p className="mt-4 text-base leading-7 text-[var(--muted)]">{service.bestFor}</p>
+                  </div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl shadow-[0_18px_55px_-40px_rgba(0,0,0,0.8)]">
-                  <div className="text-base font-semibold">Best for</div>
-                  <p className="mt-3 text-base text-white">
-                    Teams ready to build and deploy AI-enabled capabilities with speed, quality, and governance.
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card>
-              <div id="cyber-risk" className="scroll-mt-24" />
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">3) Cyber Risk Assessment</h2>
-              <p className="mt-3 text-base text-white sm:text-lg">
-                Executive-level assessments that translate technical risk into business impact. We focus on today’s
-                realities: cloud adoption, third-party dependencies, and AI-enabled workflows.
-              </p>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl shadow-[0_18px_55px_-40px_rgba(0,0,0,0.8)]">
-                  <div className="text-base font-semibold">What you get</div>
-                  <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-white">
-                    <li>Risk posture assessment and executive readout</li>
-                    <li>Third-party and AI-adjacent risk review</li>
-                    <li>Compliance and control readiness (SOX, SOC, PCI, privacy)</li>
-                    <li>Prioritized remediation roadmap</li>
-                  </ul>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl shadow-[0_18px_55px_-40px_rgba(0,0,0,0.8)]">
-                  <div className="text-base font-semibold">Best for</div>
-                  <p className="mt-3 text-base text-white">
-                    CIOs, CISOs, and boards needing clarity on risk, controls, and the fastest path to improvement.
-                  </p>
-                </div>
-              </div>
-            </Card>
+              </Surface>
+            ))}
           </div>
 
-          <div className="mt-12 flex flex-col items-start justify-between gap-5 rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl md:flex-row md:items-center">
+          <Surface className="mt-10 flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
             <div>
-              <div className="text-xl font-semibold">Want to talk through scope and timing?</div>
-              <div className="mt-1 text-base text-white">Book a short call and we’ll map the quickest path to value.</div>
+              <div className="text-xl font-semibold text-[var(--ink)]">Want help deciding where to start?</div>
+              <div className="mt-2 text-base leading-7 text-[var(--muted)]">
+                We can talk through scope, urgency, and what kind of engagement would be most useful.
+              </div>
             </div>
-            <PrimaryButton href={site.calendlyUrl}>Book a Call</PrimaryButton>
-          </div>
+            <ButtonLink href="/contact">Contact S3 Tech</ButtonLink>
+          </Surface>
         </Container>
       </Section>
     </>

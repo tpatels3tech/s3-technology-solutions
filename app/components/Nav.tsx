@@ -1,43 +1,53 @@
-import Link from 'next/link';
-import { site } from '@/app/lib/site';
+'use client';
 
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-];
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { site } from '@/app/lib/site';
+import { ButtonLink, Container } from '@/app/components/ui';
 
 export function Nav() {
+  const pathname = usePathname();
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-white/[0.04] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight text-white">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10">
-            <span className="text-sm font-semibold">S3</span>
-          </span>
-          <span className="hidden sm:inline">{site.name}</span>
-        </Link>
-        <nav className="flex items-center gap-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <a
-            href={site.calendlyUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="ml-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur hover:bg-white/15"
-          >
-            Book a Call
-          </a>
-        </nav>
-      </div>
+    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[rgba(8,17,29,0.94)] backdrop-blur">
+      <Container>
+        <div className="flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
+          <Link href="/" className="flex items-center gap-3 font-semibold tracking-tight text-[var(--ink)]">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border-strong)] bg-[var(--surface-strong)] text-sm text-[var(--ink)]">
+              S3
+            </span>
+            <span>
+              <span className="block">{site.name}</span>
+              <span className="block text-xs font-normal tracking-normal text-[var(--muted)]">{site.domain}</span>
+            </span>
+          </Link>
+
+          <div className="flex flex-col gap-3 md:flex-row md:items-center">
+            <nav className="flex flex-wrap items-center gap-1">
+              {site.nav.map((item) => (
+                (() => {
+                  const isActive = pathname === item.href;
+                  const className = isActive
+                    ? 'rounded-lg border border-[#4c6f9f] bg-[var(--surface-soft)] px-4 py-2 text-sm font-medium text-[var(--ink)]'
+                    : 'rounded-lg px-4 py-2 text-sm font-medium text-[var(--muted)] transition hover:bg-[var(--surface-soft)] hover:text-[var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9fc2ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08111d]';
+
+                  return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={isActive ? 'page' : undefined}
+                  className={className}
+                >
+                  {item.label}
+                </Link>
+                  );
+                })()
+              ))}
+            </nav>
+            <ButtonLink href="/contact">Contact</ButtonLink>
+          </div>
+        </div>
+      </Container>
     </header>
   );
 }
