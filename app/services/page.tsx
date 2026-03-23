@@ -27,7 +27,7 @@ export default function Services() {
         <Container>
           <div className="mb-6 grid gap-4 md:grid-cols-3">
             {site.agenticOfferings.map((offering) => (
-              <Surface key={offering.title}>
+              <Surface key={offering.title} className="premium-surface-soft">
                 <div className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)]">
                   Agentic
                 </div>
@@ -39,14 +39,14 @@ export default function Services() {
 
           <div className="grid gap-6">
             {site.services.map((service, index) => (
-              <Surface key={service.slug} className="bg-[var(--surface-strong)]">
+              <Surface key={service.slug}>
                 <div id={service.slug} className="scroll-mt-28" />
                 <div className="text-sm font-semibold text-[var(--accent-strong)]">Service {index + 1}</div>
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl">{service.name}</h2>
                 <p className="mt-4 max-w-3xl text-lg leading-8 text-[var(--muted)]">{service.details}</p>
 
                 <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-                  <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface)] p-6">
+                  <div className="premium-surface-soft rounded-[24px] border border-[var(--border)] p-6">
                     <div className="text-base font-semibold text-[var(--ink)]">What you get</div>
                     <ul className="mt-4 space-y-3 text-base leading-7 text-[var(--muted)]">
                       {service.outcomes.map((outcome) => (
@@ -57,7 +57,7 @@ export default function Services() {
                       ))}
                     </ul>
                   </div>
-                  <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface-soft)] p-6">
+                  <div className="premium-surface-soft rounded-[24px] border border-[var(--border)] p-6">
                     <div className="text-base font-semibold text-[var(--ink)]">Best for</div>
                     <p className="mt-4 text-base leading-7 text-[var(--muted)]">{service.bestFor}</p>
                   </div>

@@ -20,7 +20,7 @@ export function Eyebrow({ children }: { children: ReactNode }) {
 export function Surface({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={`rounded-3xl border border-[var(--border-strong)] bg-[var(--surface)] p-6 shadow-[0_18px_40px_-26px_rgba(0,0,0,0.7)] sm:p-8 ${className}`}
+      className={`premium-surface rounded-3xl border border-[var(--border-strong)] p-6 sm:p-8 ${className}`}
     >
       {children}
     </div>

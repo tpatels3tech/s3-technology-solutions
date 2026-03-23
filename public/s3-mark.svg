@@ -1,0 +1,45 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="40" fill="#08111D"/>
+  <g clip-path="url(#clipCircle)">
+    <circle cx="128" cy="128" r="102" fill="#173152" stroke="#3E6FA6" stroke-width="4"/>
+    <g opacity="0.75" stroke="url(#network)" stroke-width="2">
+      <path d="M60 100L92 74L132 88L170 66L198 94" />
+      <path d="M68 146L102 118L140 132L176 110L202 138" />
+      <path d="M78 186L116 158L152 174L186 154" />
+      <path d="M92 74L102 118L116 158" />
+      <path d="M132 88L140 132L152 174" />
+      <path d="M170 66L176 110L186 154" />
+    </g>
+    <g>
+      <circle cx="60" cy="100" r="5" fill="#8AF1FF"/>
+      <circle cx="92" cy="74" r="5" fill="#A7CFFF"/>
+      <circle cx="132" cy="88" r="5" fill="#F7FBFF"/>
+      <circle cx="170" cy="66" r="5" fill="#8FC1FF"/>
+      <circle cx="198" cy="94" r="5" fill="#8AF1FF"/>
+      <circle cx="68" cy="146" r="5" fill="#8FC1FF"/>
+      <circle cx="102" cy="118" r="5" fill="#F7FBFF"/>
+      <circle cx="140" cy="132" r="5" fill="#8AF1FF"/>
+      <circle cx="176" cy="110" r="5" fill="#A7CFFF"/>
+      <circle cx="202" cy="138" r="5" fill="#8FC1FF"/>
+      <circle cx="78" cy="186" r="5" fill="#8AF1FF"/>
+      <circle cx="116" cy="158" r="5" fill="#A7CFFF"/>
+      <circle cx="152" cy="174" r="5" fill="#F7FBFF"/>
+      <circle cx="186" cy="154" r="5" fill="#8FC1FF"/>
+    </g>
+  </g>
+  <text x="20" y="190" fill="#8FC1FF" font-size="160" font-weight="700" font-family="Avenir Next, Segoe UI, Arial, sans-serif" letter-spacing="-14">
+    S
+  </text>
+  <text x="112" y="190" fill="#F7FBFF" font-size="160" font-weight="700" font-family="Avenir Next, Segoe UI, Arial, sans-serif" letter-spacing="-14">
+    3
+  </text>
+  <defs>
+    <linearGradient id="network" x1="60" y1="74" x2="202" y2="174" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67DDF8"/>
+      <stop offset="1" stop-color="#8FAEFF"/>
+    </linearGradient>
+    <clipPath id="clipCircle">
+      <circle cx="128" cy="128" r="102"/>
+    </clipPath>
+  </defs>
+</svg>

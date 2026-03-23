@@ -16,6 +16,48 @@ export const site = {
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ],
+  navGroups: [
+    {
+      label: 'Who We Are',
+      href: '/about',
+      intro: 'Learn how S3 Technology Solutions approaches AI strategy, delivery, and governance.',
+      items: [
+        { href: '/about', title: 'Overview', description: 'Who we are, how we work, and where we add value.' },
+        { href: '/about#principles', title: 'Operating principles', description: 'Clarity, progress, and risk-aware execution.' },
+        { href: '/contact', title: 'Contact', description: 'Talk through your priorities and next steps.' },
+      ],
+    },
+    {
+      label: 'What We Do',
+      href: '/services',
+      intro: 'Explore strategy, implementation, and risk offerings designed around AI and agentic transformation.',
+      items: [
+        { href: '/services#ai-strategy', title: 'AI strategy', description: 'Shape priorities, ROI, governance models, and roadmap decisions.' },
+        { href: '/services#implementation', title: 'Implementation support', description: 'Launch copilots, workflows, and delivery foundations responsibly.' },
+        { href: '/services#cyber-risk', title: 'Cyber risk assessment', description: 'Address technology, AI, and automation risk with executive clarity.' },
+      ],
+    },
+    {
+      label: 'Agentic AI',
+      href: '/services',
+      intro: 'See how S3 helps design and govern intelligent workflows, copilots, and automation systems.',
+      items: [
+        { href: '/#agentic-offerings', title: 'Agentic offerings', description: 'Strategy, orchestration, and governed AI operations.' },
+        { href: '/#framework', title: 'Engagement framework', description: 'A staged path from discovery to governed deployment.' },
+        { href: '/services', title: 'All services', description: 'How agentic work fits into broader strategy and delivery support.' },
+      ],
+    },
+    {
+      label: 'Resources',
+      href: '/contact',
+      intro: 'Navigate the site like a guided consulting experience rather than a single brochure page.',
+      items: [
+        { href: '/services', title: 'Services', description: 'Review core service lines and agentic capabilities.' },
+        { href: '/about', title: 'About', description: 'Understand our delivery principles and positioning.' },
+        { href: '/contact', title: 'Book consultation', description: 'Start with a short discussion around scope and priorities.' },
+      ],
+    },
+  ],
   home: {
     eyebrow: 'Technology consulting for AI, agentic systems, operations, and risk',
     title: 'A clearer path from AI ambition to governed agentic execution.',
@@ -29,6 +71,32 @@ export const site = {
     primaryCta: { href: '/contact', label: 'Start a conversation' },
     secondaryCta: { href: '/services', label: 'See services' },
   },
+  heroSlides: [
+    {
+      eyebrow: 'AI strategy and advisory',
+      title: 'Shape an AI strategy that aligns with enterprise priorities.',
+      description:
+        'Define the use cases, governance model, and ROI logic that turn AI ambition into a disciplined investment agenda.',
+      href: '/services#ai-strategy',
+      cta: 'Explore AI strategy',
+    },
+    {
+      eyebrow: 'Agentic AI and workflow design',
+      title: 'Design agentic systems that work inside real operating environments.',
+      description:
+        'Map copilots, orchestration patterns, human review, and system integrations into a practical delivery model.',
+      href: '/#agentic-offerings',
+      cta: 'See agentic offerings',
+    },
+    {
+      eyebrow: 'Implementation and governance',
+      title: 'Launch AI with clear ownership, controls, and execution support.',
+      description:
+        'Move from planning to implementation with practical architecture, governance checkpoints, and measurable progress.',
+      href: '/services#implementation',
+      cta: 'View implementation support',
+    },
+  ],
   trustPoints: [
     {
       title: 'Business-first thinking',
@@ -55,6 +123,24 @@ export const site = {
     {
       title: 'Governed AI operations',
       description: 'Introduce escalation paths, human-in-the-loop checkpoints, logging, and policy guardrails so teams can scale AI responsibly.',
+    },
+  ],
+  featuredAreas: [
+    {
+      title: 'AI strategy and advisory',
+      description: 'Shape enterprise AI direction, define governance models, and link initiatives to business outcomes.',
+    },
+    {
+      title: 'Agentic workflow design',
+      description: 'Design internal copilots, orchestrated agents, and human-in-the-loop operating patterns.',
+    },
+    {
+      title: 'Implementation and enablement',
+      description: 'Move from roadmap to working systems with practical architecture, execution oversight, and delivery cadence.',
+    },
+    {
+      title: 'Cyber risk and governance',
+      description: 'Assess risk, controls, compliance readiness, and oversight needs across AI-enabled operations.',
     },
   ],
   services: [
@@ -120,6 +206,37 @@ export const site = {
       step: '03',
       title: 'Support delivery',
       description: 'We help teams execute clearly, launch AI and agentic capabilities responsibly, communicate progress, and keep risk in view as the work evolves.',
+    },
+  ],
+  framework: [
+    {
+      step: '01',
+      title: 'Frame the opportunity',
+      description: 'Clarify business goals, target outcomes, governance needs, and the highest-value AI and agentic use cases.',
+    },
+    {
+      step: '02',
+      title: 'Design the operating model',
+      description: 'Define delivery structure, ownership, control points, tool integrations, and ROI-linked milestones.',
+    },
+    {
+      step: '03',
+      title: 'Launch with governance',
+      description: 'Implement, monitor, and refine AI systems with human review, measurable adoption, and risk visibility.',
+    },
+  ],
+  whyS3: [
+    {
+      title: 'Strategy tied to outcomes',
+      description: 'Recommendations are linked to enterprise priorities, operating realities, and measurable business impact.',
+    },
+    {
+      title: 'Execution-minded advisory',
+      description: 'Plans are built to be used by real teams, not admired in a slide deck and forgotten.',
+    },
+    {
+      title: 'Governance built in',
+      description: 'AI, copilots, and agentic systems are designed with oversight and accountability from the start.',
     },
   ],
   about: {
