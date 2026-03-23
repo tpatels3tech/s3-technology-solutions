@@ -5,8 +5,20 @@ export function Container({ children }: { children: ReactNode }) {
   return <div className="mx-auto max-w-6xl px-5 sm:px-8">{children}</div>;
 }
 
-export function Section({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <section className={`py-14 sm:py-18 ${className}`}>{children}</section>;
+export function Section({
+  children,
+  className = '',
+  id,
+}: {
+  children: ReactNode;
+  className?: string;
+  id?: string;
+}) {
+  return (
+    <section id={id} className={`py-14 sm:py-18 ${className}`}>
+      {children}
+    </section>
+  );
 }
 
 export function Eyebrow({ children }: { children: ReactNode }) {
